@@ -4,12 +4,12 @@
 static int my_init(void);
 static void my_exit(void);
 
-static int my_init(void) {
+static int __init my_init(void) {
 	printk("Hello world from the kernel\n");
 	return 0;
 }
 
-static void my_exit(void) {
+static void __exit my_exit(void) {
 	printk("Exiting kernel, goodbye!\n");
 }
 
